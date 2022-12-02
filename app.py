@@ -3,7 +3,7 @@ from fastai.vision.all import *
 
 st.title('jetour modellarini aniqlash')
 
-file = st.file_uploader("rasm yuklash", type=['png','jpeg','gif','svg']) 
+file = st.file_uploader("rasm yuklash", type=['png','jpeg','jpg','gif','svg']) 
 
 if file:
   st.image(file)
