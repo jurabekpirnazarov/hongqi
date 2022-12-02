@@ -1,5 +1,11 @@
 import streamlit as st
 from fastai.vision.all import *
+import platform
+import pathlib
+
+
+plt = platform.system
+if plt == "Linux": pathlib.WindowsPath = pathlib.PosixPath
 
 st.title('jetour modellarini aniqlash')
 
