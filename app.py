@@ -7,7 +7,7 @@ file = st.file_uploader("rasm yuklash", type=['png','jpeg','jpg','gif','svg'])
 
 if file:
   st.image(file)
-  model = load_learner('carsbestunehongqi.pkl')
+  model = load_learn('carsbestunehongqi.pkl')
   img = PILImage.create(file)
   pred , id, prob = model.predict(img)
   st.success(f'bashorat: {pred}')
