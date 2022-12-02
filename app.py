@@ -11,5 +11,3 @@ if file:
   img = PILImage.create(file)
   pred , id, prob = model.predict(img)
   st.success(f'bashorat: {pred}')
-  
-  
