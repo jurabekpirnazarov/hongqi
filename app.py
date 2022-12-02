@@ -1,5 +1,5 @@
 import streamlit as st
-from fastai.vision import *
+import fastai
 
 st.title('jetour modellarini aniqlash')
 
