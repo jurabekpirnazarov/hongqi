@@ -3,14 +3,15 @@ import fastai
 import platform
 import pathlib
 import pickle
-# load : get the data from file.
-data = pickle.load(open('carsbestunehongqi.pkl', "rb"))
-# loads : get the data from var
-
 
 plt = platform.system()
 if plt == "Linux": pathlib.WindowsPath = pathlib.PosixPath
 
+  
+with open('carsbestunehongqi.pkl', 'rb') as f:
+    data = pickle.load(f) from var
+  
+  
 st.title('jetour modellarini aniqlash')
 
 file = st.file_uploader("rasm yuklash", type=['png','jpeg','jpg','gif','svg']) 
