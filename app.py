@@ -1,9 +1,15 @@
 import streamlit as st
-import fastai
+from fastai.vision.all import *
 
 st.title('jetour modellarini aniqlash')
 
-st.file_uploader("rasm yuklash", type=['png','jpeg','gif','svg']) 
+file = st.file_uploader("rasm yuklash", type=['png','jpeg','gif','svg']) 
 
-model = load_learner('carsbestunehongqi.pkl')
-
+if file:
+  st.image(file)
+  model = load_learner('carsbestunehongqi.pkl')
+  img = PILImage.create(file)
+  pred , id, prob = model.predict(img)
+  st.success(f'bashorat: {pred}')
+  
+  
