@@ -2,7 +2,6 @@ import streamlit as st
 import fastai
 import platform
 import pathlib
-import pickle
 
 plt = platform.system()
 if plt == "Linux": pathlib.WindowsPath = pathlib.PosixPath
