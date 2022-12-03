@@ -6,13 +6,8 @@ import pickle
 
 plt = platform.system()
 if plt == "Linux": pathlib.WindowsPath = pathlib.PosixPath
-
-  
-with open('carsbestunehongqi.pkl', 'rb') as f:
-    data = pickle.load(f) from var
-  
-  
-st.title('jetour modellarini aniqlash')
+ 
+st.title('Jetour modellarini aniqlash')
 
 file = st.file_uploader("rasm yuklash", type=['png','jpeg','jpg','gif','svg']) 
 
