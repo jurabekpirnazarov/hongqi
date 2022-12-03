@@ -13,6 +13,7 @@ file = st.file_uploader("rasm yuklash", type=['png','jpeg','jpg','gif','svg'])
 
 if file:
   st.image(file)
+  data = load_learner('https://github.com/jurabekpirnazarov/hongqi/blob/main/carsbestunehongqi.pkl')
   img = PILImage.create(file)
   pred , id, prob = data.predict(img)
   st.success(f'bashorat: {pred}')
